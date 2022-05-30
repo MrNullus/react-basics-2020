@@ -1,0 +1,104 @@
+======================
+    O que é ReactJS?
+======================
+____________________________________________________
+
+    #>> É uma lib feita pelo Facebook para a
+    criação de interfaces interativas, reciclaveis e
+    escalaveis muitas vezes mais eficientes que uma
+    aplicação web comum;    
+
+    #> Coisas fucking importantes dentro do ReactJS:
+        <% Virtual DOM - Serve para fazer o JS functionar mais rapido %>   
+        <% Componentes Web Reutilizaveis (e Limpos) 
+            - 
+        Reusable (and clearer) Components Web %>
+
+    #> Para funcionar precisa importar o React e o ReactDOM;
+
+    #> React usa o JSX é uma "linguagem (tipo pseudo)" misturando HTML e JS que no final transforma tudo em
+    HTML, CSS e JS;
+
+    # ReactDOM
+        #> Esse objeto serve basicamente para acessar e modelar o DOM do React
+        #> .render() - é um metodo dentro do ReactDOM servindo para renderizar elementos dentro do DOM
+            $> Sintaxe:
+                ReactDOM.render(<element>, <route for element>)
+
+    :exemp: 
+        {index.html}
+        // Isso aqui é muito importante, porque functiona como a raiz do app;
+        <div id="root">
+            // Aqui vai ser renderizado o myNewP;
+        </div>
+
+        {index.js}
+        ReactDOM.render(myNewP, document.getElementById("root));
+
+        var myNewP = document.createElement("p");
+        myNewP.innerHTML = "Isso é um paragrafo";
+
+    ----------------------------------------------------
+
+    #> Components (Componentes)
+        %> No React são funcionais que retornam código HTML, antes usava-se classes para cria compoents agora não se usa muitas
+        e tudo no React é um component;
+
+    #> Props - Propriedades
+        %> São basicamente atributos HTML;
+
+    #> State - Estado
+        %> Estado é a informação que o componente está, se a informação muda o estado também;
+    ----------------------------------------------------
+
+    #> Formas de criar um component:
+        //=---------
+        function Greeting() {
+            return (
+                <div>
+                    <h1>Hello World</h1>
+                </div>
+            );
+        }
+
+        //=---------
+        const Greeting = () => {
+            // *** Vai criar um elemento react
+            // ? React.createElement(<element>, <props>, <children>)
+
+            return React.createElement(
+                'div', 
+                {},
+                ReactDom('h1', {}, 'hello world!!!')
+            );
+        }
+
+    #> Componentes Aninhados e Tools React
+    //*** Tools React
+    // ?>> Para usar o Tools é necessario apertar F12 e acessar as Tools da extensão React Dev Tools;
+
+    //*** Componentes Aninhados - Nested Components:
+    // ?>> No React a ideia é que se divida por pedaços cada funcionalidade da interface
+    // ?>> Para usar isso basta criar o componente de maneira explicita ou implicita 
+    // ?¬ e chamar no lugar que quer renderizar esse componente:
+    /* 
+        ! Forma Explicita:
+        const Message = () => {
+            return <h2>This is my menssage</h2>;
+        }
+
+        ! Forma Implicita:
+        const Person = () => <h1>I am Gustavo, but I'm called <Nickname /></h1>;
+
+        ! Para chamar num outro componente:
+        function Greeting() {
+            return (
+                <div>
+                    <Person />
+                    <Message />
+                </div>
+            );
+        }	
+    */
+
+____________________________________________________

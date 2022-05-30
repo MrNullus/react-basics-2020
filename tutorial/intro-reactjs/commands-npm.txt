@@ -1,0 +1,17 @@
+======================
+    Commands NPM
+======================
+____________________________________________________
+    $>> npm init 
+        #> cria o arquivo com package.json;
+
+    $>> npm install <package name> --save
+        #> instala pacotes locais e adiciona ao package.json;
+
+    $>> npm install <package name> -g
+        #> instala pacotes globais;
+
+    $>> npm install <package name> --save-dev
+        #> usa o pacote e salva como um pacote para dev;
+
+____________________________________________________

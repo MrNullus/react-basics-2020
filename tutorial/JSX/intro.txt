@@ -1,0 +1,32 @@
+==============
+    JSX 
+==============
+___________________________________
+
+    $>> JSX é uma "linguagem" que mistura HTML e JS em um ;
+    $>> Baseada no JS e que é basicamente e retornar: JS e HTML;
+
+
+    $>> Regras do JSX:
+        => Retornar um unico elemento;
+
+        => div / section / article ou fragmentos;
+
+        => Usar camelCase em atributos no HTML;
+
+        => className é uma instancia para class - ou seja, use className e não class;
+
+        => Feche todos os elementos;
+        
+        => Formato -> sempre usar () no return;
+
+    //*** JSX - CSS
+    // ? No JSX pode se usar CSS existindo algumas formas:
+    // ?>> Interno:
+    // const Author = () => (
+    //   <h4 style={{ color: '#262626', fontSize: '0.75rem', marginTop: '0.25rem' }}>
+    //     Jennifer L. Armentrout
+    //   </h4>
+    // )
+
+___________________________________
